@@ -1,0 +1,186 @@
+/* עיצוב טבלה */
+table {
+    width: 100%;
+    border-collapse: separate; /* כדי לאפשר עיגול פינות */
+    border-spacing: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* עיגול פינות הטבלה */
+    overflow: hidden; /* לשמור על עיגול פינות */
+}
+
+/* גבולות התאים */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* עיצוב כותרות העמודות */
+thead {
+    background-color: #a2aedb; /* צבע פסטלי-סגלגל */
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+thead th {
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ביטול hover לכותרות */
+thead th:hover {
+    background-color: inherit; /* אין שינוי בצבע */
+}
+
+/* עיצוב שורות */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* עיצוב תאים */
+td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* עיגול פינות של הכותרת */
+thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* עיגול פינות של השורה התחתונה */
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* עיצוב לפאגינציה */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #a2aedb; /* צבע פסטלי-סגלגל */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+    background-color: #7384cf; /* תואם ל-sidebar */
+}
+
+.pagination button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+.pagination button.active {
+    background-color: #7384cf; /* צבע פעיל */
+}
+/* עיצוב select */
+.status-select {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    appearance: none; /* הסתרת חץ ברירת המחדל בדפדפנים */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23999999" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* אפקטים על hover */
+.status-select:hover {
+    border-color: #aaa;
+    background-color: #f1f1f1;
+}
+
+/* אפקטים על focus */
+.status-select:focus {
+    outline: none;
+    border-color: #7384cf;
+    background-color: #e7f1ff;
+}
+/* עיצוב filter-container */
+/* עיצוב filter-container */
+.filter-container {
+    display: flex;
+    justify-content: flex-start; /* סידור אלמנטים על אותו קו */
+    align-items: center; /* יישור האלמנטים במרכז מבחינת גובה */
+    margin: 20px 0;
+    gap: 15px; /* מרווח אחיד בין כל האלמנטים */
+}
+
+/* עיצוב כותרות של filter */
+.filter-container label {
+    margin: 0;  /* מבטל את המרווח בין הכותרת לאופציה */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* עיצוב select בתוך filter */
+.filter-container select {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: normal;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    height: 38px; /* מבטיח שכל האופציות יהיו בגובה אחיד */
+}
+
+/* עיצוב כפתור סיווג sort-button */
+.sort-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #a2aedb; /* צבע פסטלי-סגלגל */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sort-button:hover {
+    background-color: #7384cf; /* תואם ל-sidebar */
+}
+
+.sort-button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
